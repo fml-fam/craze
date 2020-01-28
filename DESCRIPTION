@@ -1,0 +1,18 @@
+Package: craze
+Type: Package
+Title: Reference 'fmlr' Implementation
+Version: 0.1-0
+Description: High-level, R-like interface for 'fmlr'.
+License: BSL-1.0
+Depends:
+    R (>= 3.6.0)
+Imports:
+    fmlr (>= 0.1-0)
+ByteCompile: yes
+URL: https://github.com/wrathematics/craze
+BugReports: https://github.com/wrathematics/craze/issues
+Authors@R: c(
+    person("Drew", "Schmidt", role=c("aut", "cre"), email="wrathematics@gmail.com")
+    )
+Maintainer: Drew Schmidt <wrathematics@gmail.com>
+RoxygenNote: 7.0.2
