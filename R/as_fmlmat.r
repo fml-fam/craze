@@ -28,17 +28,3 @@ as_fmlmat = function(x)
   
   wrapfml(x)
 }
-
-
-
-ytox = function(x, y)
-{
-  if (inherits(x, "cpumat"))
-    as_cpumat(y, copy=FALSE)
-  else if (inherits(x, "gpumat"))
-    as_gpumat(y)
-  else if (inherits(x, "mpimat"))
-    as_mpimat(y)
-  else
-    stop("'x' must be an fmlr cpu/gpu/mpi-matrix")
-}

@@ -24,3 +24,17 @@ setClass("fmlmat",
 
 DATA = function(x) x@Data
 wrapfml = function(x) new("fmlmat", Data=x)
+
+
+
+ytox = function(x, y)
+{
+  if (inherits(x, "cpumat"))
+    as_cpumat(y, copy=FALSE)
+  else if (inherits(x, "gpumat"))
+    as_gpumat(x$get_card(), y)
+  else if (inherits(x, "mpimat"))
+    as_mpimat(x$get_grid(), y)
+  else
+    stop("'x' must be an fmlr cpu/gpu/mpi-matrix")
+}
