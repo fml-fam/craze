@@ -10,8 +10,7 @@
 \item{x}{An object of class 'fmlmat'.}
 }
 \description{
-Convert an fmlr matrix object (i.e. one of class 'cpumat', 'gpumat', or
-'mpimat') to an 'fmlmat' object.
+Convert an 'fmlmat' object to an R object.
 }
 \details{
 The conversion does not produce a copy of the data. It is merely a shallow

@@ -1,32 +1,12 @@
 #' matmult
 #' 
-#' Matrix multiplication for numeric/float matrices.
-#' 
-#' @details
-#' If a numeric matrix is multiplied against a float matrix, then if the
-#' "numeric" matrix is integers, the integers are promoted to floats. Otherwise,
-#' the float matrix is promoted to doubles.
+#' Matrix multiplication.
 #' 
 #' @param x,y
-#' Numeric/float matrices.
+#' fmlmat matrices.
 #' 
 #' @return
-#' A matrix of the same type as the highest precision input.
-#' 
-#' @examples
-#' library(float)
-#' 
-#' s1 = flrunif(5, 5)
-#' s2 = flrunif(5, 2)
-#' x = matrix(1:25, 5)
-#' 
-#' s1 %*% s2 # float
-#' 
-#' storage.mode(x) # integer
-#' x %*% s2 # float
-#' 
-#' storage.mode(x) = "double"
-#' x %*% s2 # double
+#' A matrix of the same type as the inputs.
 #' 
 #' @name matmult
 #' @rdname matmult
