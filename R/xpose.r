@@ -11,9 +11,10 @@
 #' @name xpose
 #' @rdname xpose
 #' @export
-setMethod("t", signature(x="float32"),
+setMethod("t", signature(x="fmlmat"),
   function(x)
   {
-    linalg_xpose(x)
+    ret = linalg_xpose(DATA(x))
+    wrapfml(ret)
   }
 )

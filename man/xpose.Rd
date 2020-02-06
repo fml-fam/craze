@@ -4,7 +4,7 @@
 \alias{xpose}
 \title{xpose}
 \usage{
-\S4method{t}{float32}(x)
+\S4method{t}{fmlmat}(x)
 }
 \arguments{
 \item{x}{An fmlmat matrix.}
