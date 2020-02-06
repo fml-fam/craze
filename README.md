@@ -1,11 +1,9 @@
 # craze
 
 * **Version:** 0.1-0
-* **Status:** [![Build Status](https://travis-ci.org/wrathematics/craze.png)](https://travis-ci.org/wrathematics/craze)
 * **License:** [BSL-1.0](http://opensource.org/licenses/BSL-1.0)
-* **Project home**: https://github.com/wrathematics/fmlr
-* **Bug reports**: https://github.com/wrathematics/fmlr/issues
-* **Documentation**: TODO
+* **Project home**: https://github.com/fml-fam/fmlr
+* **Bug reports**: https://github.com/fml-fam/fmlr/issues
 
 
 High-level, R-like interface for fmlr. The package name is a play on the German word 'fimmel'.
@@ -20,10 +18,12 @@ The goal of the package is to give a move traditional R-like interface around fm
 
 ## Installation
 
-The development version is maintained on GitHub:
+You will need an installation of [fmlr](https://github.com/fml-fam/fmlr). See the fmlr package README for installation instructions.
+
+The development version of craze is maintained on GitHub:
 
 ```r
-remotes::install_github("wrathematics/craze")
+remotes::install_github("fml-fam/craze")
 ```
 
 
@@ -66,4 +66,15 @@ x_fml %*% x_fml
 ## 30.0000 66.0000 102.0000 
 ## 36.0000 81.0000 126.0000 
 ## 42.0000 96.0000 150.0000 
+```
+
+
+
+```r
+x_cpumat$fill_zero()
+x_fml
+## # cpumat 3x3 type=d
+## 0.0000 0.0000 0.0000 
+## 0.0000 0.0000 0.0000 
+## 0.0000 0.0000 0.0000 
 ```
