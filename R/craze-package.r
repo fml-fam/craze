@@ -5,6 +5,7 @@
 #' 
 #' @import fmlr
 #' @import methods
+#' @importFrom float is.float
 #' 
 #' @docType package
 #' @name craze-package

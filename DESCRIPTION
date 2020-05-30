@@ -8,7 +8,8 @@ Depends:
     R (>= 3.6.0),
     fmlr (>= 0.2-1)
 Imports:
-    methods
+    methods,
+    float (>= 0.2-4)
 ByteCompile: yes
 URL: https://github.com/wrathematics/craze
 BugReports: https://github.com/wrathematics/craze/issues
