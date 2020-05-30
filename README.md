@@ -102,7 +102,7 @@ Throughout, I'm using:
     - NVIDIA GeForce GTX 1070 Ti
     - cuBLAS
 
-Here's a quick matrix multiplication benchmark. 
+Let's take a look at a quick matrix multiplication benchmark. First, we need to set up the test matrices:
 
 ```r
 library(craze)
@@ -131,7 +131,7 @@ system.time(x %*% x)
     ##   user  system elapsed 
     ## 10.241   0.330   1.345
 
-As I recall, R's matrix multiplication does some pre-scanning for bad numerical values. None of the implementations that follow do, so there is some overhead there that may or may not be of value to you.
+As I recall, R's matrix multiplication does some pre-scanning for bad numerical values. None of the implementations that follow do, so there is some overhead in this implementation that may or may not be of value to you.
 
 Here's the float test (single precision, CPU)
 
@@ -165,3 +165,11 @@ system.time(x_gpu %*% x_gpu)
     ## 0.002   0.001   0.002
 
 This is more than 300x faster than the CPU float version. There's a reason I chose matrix multiplication for this benchmark 😉
+
+
+| Benchmark | Precision | Wall-clock time | Relative Performance |
+|-----------|-----------|----------------:|---------------------:|
+| R matrix `x` | double | 1.345 | 672.5 |
+| float matrix `x_flt` | single | 0.640 | 320.0 |
+| fmlr CPU matrix `x_cpu` | double | 1.327 | 663.5 |
+| fmlr GPU matrix `x_gpu` | single | 0.002 | 1.0 |
