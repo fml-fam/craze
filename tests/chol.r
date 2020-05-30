@@ -1,6 +1,6 @@
 suppressMessages(library(stats))
 suppressMessages(library(craze))
-set.seed(1234)
+comm.set.seed(1234)
 
 n = 5
 x = crossprod(matrix(runif(n*n), n))
