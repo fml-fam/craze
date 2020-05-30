@@ -5,6 +5,9 @@ is_gpumat = function(x) inherits(x, "gpumat")
 is_mpimat = function(x) inherits(x, "mpimat")
 is_fmlmat = function(x) inherits(x, "fmlmat")
 
+is_mat = function(x) is_cpumat(x) || is_gpumat(x) || is_mpimat(x)
+is_vec = function(x) is_cpuvec(x) || is_gpuvec(x)
+
 
 
 skeleton_mat = function(x)
