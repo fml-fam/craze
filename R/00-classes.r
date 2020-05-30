@@ -3,7 +3,7 @@ setOldClass("cpuvec")
 setOldClass("gpumat")
 setOldClass("gpuvec")
 setOldClass("mpimat")
-setClassUnion("fmlmat", c("cpumat", "cpuvec", "gpumat", "gpuvec", "mpimat"))
+setClassUnion("fmlmat_s3", c("cpumat", "cpuvec", "gpumat", "gpuvec", "mpimat"))
 
 #' Class fmlmat
 #' 
@@ -12,13 +12,13 @@ setClassUnion("fmlmat", c("cpumat", "cpuvec", "gpumat", "gpuvec", "mpimat"))
 #' @slot Data
 #' An fmlr object.
 #' 
-#' @name float32-class
-#' @docType class
+#' @name fmlmat-class
+#' @rdname fmlmat-class
 #' 
 #' @export
 setClass("fmlmat", 
   representation(
-    Data="fmlmat"
+    Data="fmlmat_s3"
   )
 )
 
