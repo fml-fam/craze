@@ -1,3 +1,19 @@
+# Release 0.2-0 (5/30/2020)
+
+New:
+  * Added high-level constructor fmlmat().
+
+API Changes: None
+
+Bug Fixes: None
+
+Documentation:
+  * Minor tweaks and clarifications.
+
+
+
+
+
 # Release 0.1-0 (5/29/2020)
 
 New:
