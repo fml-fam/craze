@@ -22,7 +22,7 @@
 #' @export
 as_fmlmat = function(x)
 {
-  if (!inherits(x, "cpumat") && !inherits(x, "gpumat") && !inherits(x, "mpimat"))
+  if (!is_mat(x) && !is_vec(x))
     stop("'x' must be an fml matrix object")
   
   wrapfml(x)
