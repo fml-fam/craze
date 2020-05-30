@@ -4,10 +4,12 @@
 \alias{as.matrix.fmlmat}
 \title{as_fmlmat}
 \usage{
-\method{as.matrix}{fmlmat}(x)
+\method{as.matrix}{fmlmat}(x, ...)
 }
 \arguments{
 \item{x}{An object of class 'fmlmat'.}
+
+\item{...}{Ignored.}
 }
 \description{
 Convert an 'fmlmat' object to an R object.

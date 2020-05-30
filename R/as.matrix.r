@@ -5,12 +5,14 @@
 #' @details
 #' The conversion does not produce a copy of the data. It is merely a shallow
 #' S4 wrapper around the fmlr object.
+#' @param ...
+#' Ignored.
 #' 
 #' @param x
 #' An object of class 'fmlmat'.
 #' 
 #' @export
-as.matrix.fmlmat = function(x)
+as.matrix.fmlmat = function(x, ...)
 {
   x = DATA(x)
   
