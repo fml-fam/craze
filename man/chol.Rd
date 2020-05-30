@@ -15,6 +15,3 @@
 \description{
 Cholesky factorization.
 }
-\details{
-Returns the LOWER Cholesky factor. R returns the upper.
-}

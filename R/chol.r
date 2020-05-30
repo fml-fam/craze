@@ -2,9 +2,6 @@
 #' 
 #' Cholesky factorization.
 #' 
-#' @details
-#' Returns the LOWER Cholesky factor. R returns the upper.
-#' 
 #' @param x
 #' An fmlmat matrix.
 #' @param ...
@@ -17,5 +14,5 @@ chol.fmlmat = function(x, ...)
 {
   ret = DATA(x)$dupe()
   linalg_chol(ret)
-  wrapfml(ret)
+  wrapfml(linalg_xpose(ret))
 }
