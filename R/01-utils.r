@@ -10,7 +10,7 @@ is_fmlmat = function(x) inherits(x, "fmlmat")
 skeleton_mat = function(x)
 {
   if (is_fmlmat(x))
-    new_skeleton(DATA(x))
+    skeleton_mat(DATA(x))
   
   else if (is_cpumat(x) || is_cpuvec(x))
     cpumat()
@@ -25,7 +25,7 @@ skeleton_mat = function(x)
 skeleton_vec = function(x)
 {
   if (is_fmlmat(x))
-    new_skeleton(DATA(x))
+    skeleton_vec(DATA(x))
   
   else if (is_cpumat(x) || is_cpuvec(x))
     cpuvec()
