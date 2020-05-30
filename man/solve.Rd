@@ -2,9 +2,13 @@
 % Please edit documentation in R/solve.r
 \name{solve}
 \alias{solve}
+\alias{solve,fmlmat,ANY-method}
+\alias{solve,fmlmat,fmlmat-method}
 \title{solve}
 \usage{
-\S4method{solve}{fmlmat}(a, b, ...)
+\S4method{solve}{fmlmat,ANY}(a)
+
+\S4method{solve}{fmlmat,fmlmat}(a, b, ...)
 }
 \arguments{
 \item{a, b}{fmlmat matrices.}

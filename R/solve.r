@@ -9,21 +9,32 @@
 #' 
 #' @name solve
 #' @rdname solve
+NULL
+
+
+
+#' @rdname solve
 #' @export
-setMethod("solve", signature(a="fmlmat", b="ANY"),
+setMethod("solve", signature(a="fmlmat"),
+  function(a)
+  {
+    ret = DATA(a)$dupe()
+    linalg_invert(ret)
+    
+    wrapfml(ret)
+  }
+)
+
+
+
+#' @rdname solve
+#' @export
+setMethod("solve", signature(a="fmlmat", b="fmlmat"),
   function(a, b, ...)
   {
-    if (!missing(b))
-    {
-      a_cp = DATA(a)$dupe()
-      ret = DATA(b)$dupe()
-      linalg_solve(a_cp, ret)
-    }
-    else
-    {
-      ret = DATA(a)$dupe()
-      linalg_invert(ret)
-    }
+    a_cp = DATA(a)$dupe()
+    ret = DATA(b)$dupe()
+    linalg_solve(a_cp, ret)
     
     wrapfml(ret)
   }
