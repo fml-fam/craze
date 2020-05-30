@@ -42,10 +42,8 @@ Multiplying CPU data:
 library(craze)
 
 x = matrix(as.double(1:9), 3)
-x_cpumat = fmlr::as_cpumat(x, copy=FALSE)
-
-x_fml = craze::as_fmlmat(x_cpumat)
-x_fml
+x_cpu = fmlmat(x)
+x_cpu
 ```
 
     ## # cpumat 3x3 type=d
@@ -54,7 +52,7 @@ x_fml
     ## 3.0000 6.0000 9.0000 
 
 ```r
-x_fml %*% x_fml
+x_cpu %*% x_cpu
 ```
 
     ## # cpumat 3x3 type=d
@@ -65,10 +63,8 @@ x_fml %*% x_fml
 and GPU data:
 
 ```r
-c = card()
-x_gpumat = as_gpumat(c, x)
-x_fml = craze::as_fmlmat(x_gpumat)
-x_fml
+x_gpu = fmlmat(x, backend="gpu")
+x_gpu
 ```
 
     ## # gpumat 3x3 type=d 
@@ -77,7 +73,7 @@ x_fml
     ## 3.0000 6.0000 9.0000 
 
 ```r
-x_fml %*% x_fml
+x_gpu %*% x_gpu
 ```
 
     ## # gpumat 3x3 type=d 
@@ -110,15 +106,9 @@ library(craze)
 
 n = 5000
 x = matrix(runif(n*n), n, n)
-
 x_flt = fl(x)
-
-x_cpu = as_cpumat(x, copy=FALSE)
-x_cpu = as_fmlmat(x_cpu)
-
-c = card()
-x_gpu = gpumat(c, type="float")$from_robj(x)
-x_gpu = as_fmlmat(x_gpu)
+x_cpu = fmlmat(x)
+x_gpu = fmlmat(x, type="float", backend="gpu")
 ```
 
 We're using float for the GPU data because my graphics card doesn't have the full double precision cores. That change should give us a roughly 2x run-time advantage over a double precision test, like the R version. It's more amenable to the float test.
