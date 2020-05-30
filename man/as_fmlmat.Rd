@@ -9,6 +9,9 @@ as_fmlmat(x)
 \arguments{
 \item{x}{An object of class 'cpumat', 'gpumat', or 'mpimat'.}
 }
+\value{
+An \code{fmlmat} class object.
+}
 \description{
 Convert an fmlr matrix object (i.e. one of class 'cpumat', 'gpumat', or
 'mpimat') to an 'fmlmat' object.
@@ -18,7 +21,7 @@ The conversion does not produce a copy of the data. It is merely a shallow
 S4 wrapper around the fmlr object.
 }
 \examples{
-library(craze)
+suppressMessages(library(craze))
 
 x = matrix(as.double(1:6), 3)
 x_cpumat = fmlr::as_cpumat(x, copy=FALSE)

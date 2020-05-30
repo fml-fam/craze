@@ -10,8 +10,11 @@
 #' @param x
 #' An object of class 'cpumat', 'gpumat', or 'mpimat'.
 #' 
+#' @return
+#' An \code{fmlmat} class object.
+#' 
 #' @examples
-#' library(craze)
+#' suppressMessages(library(craze))
 #' 
 #' x = matrix(as.double(1:6), 3)
 #' x_cpumat = fmlr::as_cpumat(x, copy=FALSE)
