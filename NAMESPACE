@@ -2,6 +2,7 @@
 
 S3method(as.matrix,fmlmat)
 export(as_fmlmat)
+export(t)
 exportClasses(fmlmat)
 exportMethods("%*%")
 exportMethods(La.svd)
