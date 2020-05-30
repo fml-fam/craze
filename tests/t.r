@@ -1,4 +1,3 @@
-suppressMessages(library(fmlr))
 suppressMessages(library(craze))
 
 x = matrix(as.double(1:30), 10)

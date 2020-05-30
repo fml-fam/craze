@@ -1,4 +1,4 @@
-suppressMessages(library(fmlr))
+suppressMessages(library(stats))
 suppressMessages(library(craze))
 set.seed(1234)
 
@@ -10,4 +10,9 @@ y_fml = as_fmlmat(as_cpumat(y))
 
 test = as.matrix(solve(x_fml, y_fml))
 truth = solve(x, y)
+stopifnot(all.equal(test, truth))
+
+x_fml = as_fmlmat(as_cpumat(x))
+test = as.matrix(solve(x_fml))
+truth = solve(x)
 stopifnot(all.equal(test, truth))
