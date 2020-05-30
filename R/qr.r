@@ -4,8 +4,13 @@
 #' 
 #' @param x
 #' An fmlmat matrix.
+#' @param qr
+#' A compact QR factorization, specifically of class \code{qr_fml} - the return
+#' of the \code{qr()} function on \code{fmlmat} data.
 #' @param complete,Dvec,...
 #' Ignored.
+#' 
+#' @aliases qr.Q qr.R
 #' 
 #' @name qr
 #' @rdname qr
@@ -39,8 +44,6 @@ qr.fmlmat = function(x, ...)
 
 
 
-#' @rdname qr
-#' @export
 setGeneric(name="qr.Q", useAsDefault=base::qr.Q, package="craze")
 
 #' @rdname qr
@@ -59,8 +62,6 @@ setMethod("qr.Q", signature(qr="qr_fml"),
 
 
 
-#' @rdname qr
-#' @export
 setGeneric(name="qr.R", useAsDefault=base::qr.R, package="craze")
 
 #' @rdname qr

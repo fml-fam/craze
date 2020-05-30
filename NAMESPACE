@@ -3,8 +3,6 @@
 S3method(as.matrix,fmlmat)
 S3method(qr,fmlmat)
 export(as_fmlmat)
-export(qr.Q)
-export(qr.R)
 export(t)
 exportClasses(fmlmat)
 exportMethods("%*%")

@@ -2,25 +2,24 @@
 % Please edit documentation in R/qr.r
 \name{qr}
 \alias{qr}
-\alias{qr.fmlmat}
 \alias{qr.Q}
-\alias{qr.Q,qr_fml-method}
 \alias{qr.R}
+\alias{qr.fmlmat}
+\alias{qr.Q,qr_fml-method}
 \alias{qr.R,qr_fml-method}
 \title{QR}
 \usage{
 \method{qr}{fmlmat}(x, ...)
 
-qr.Q(qr, complete = FALSE, Dvec)
-
 \S4method{qr.Q}{qr_fml}(qr, complete = FALSE, Dvec)
-
-qr.R(qr, complete = FALSE)
 
 \S4method{qr.R}{qr_fml}(qr, complete = FALSE)
 }
 \arguments{
 \item{x}{An fmlmat matrix.}
+
+\item{qr}{A compact QR factorization, specifically of class \code{qr_fml} - the return
+of the \code{qr()} function on \code{fmlmat} data.}
 
 \item{complete, Dvec, ...}{Ignored.}
 }
