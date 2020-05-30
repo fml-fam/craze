@@ -18,10 +18,9 @@ The conversion does not produce a copy of the data. It is merely a shallow
 S4 wrapper around the fmlr object.
 }
 \examples{
-library(fmlr)
 library(craze)
 
-x = matrix(1:9, 3)
+x = matrix(as.double(1:6), 3)
 x_cpumat = fmlr::as_cpumat(x, copy=FALSE)
 
 x_fml = craze::as_fmlmat(x_cpumat)
