@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.matrix.r
 \name{as.matrix.fmlmat}
 \alias{as.matrix.fmlmat}
-\title{as_fmlmat}
+\title{as.matrix}
 \usage{
 \method{as.matrix}{fmlmat}(x, ...)
 }

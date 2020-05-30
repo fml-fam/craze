@@ -1,4 +1,4 @@
-#' as_fmlmat
+#' as.matrix
 #' 
 #' Convert an 'fmlmat' object to an R object.
 #' 
@@ -16,15 +16,19 @@ as.matrix.fmlmat = function(x, ...)
 {
   x = DATA(x)
   
-  if (inherits(x, "cpumat"))
+  if (is_cpumat(x) || is_cpuvec(x))
     x$to_robj()
-  else if (inherits(x, "gpumat"))
+  else if (is_gpumat(x) || is_gpuvec(x))
   {
-    ret = cpumat()
+    if (is_gpumat(x))
+      ret = cpumat()
+    else
+      ret = cpuvec()
+    
     gpu2cpu(x, ret)
     ret$to_robj()
   }
-  else if (inherits(x, "mpimat"))
+  else if (is_mpimat(x))
   {
     ret = cpumat()
     mpi2cpu(x, ret)
