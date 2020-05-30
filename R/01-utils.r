@@ -16,13 +16,13 @@ skeleton_mat = function(x)
     skeleton_mat(DATA(x))
   
   else if (is_cpumat(x) || is_cpuvec(x))
-    cpumat()
+    cpumat(type=x$get_type_str())
   
   else if (is_gpumat(x) || is_gpuvec(x))
-    gpumat(x$get_card())
+    gpumat(x$get_card(), type=x$get_type_str())
   
   else if (is_mpimat(x))
-    mpimat(x$get_grid())
+    mpimat(x$get_grid(), type=x$get_type_str())
 }
 
 skeleton_vec = function(x)
@@ -31,13 +31,13 @@ skeleton_vec = function(x)
     skeleton_vec(DATA(x))
   
   else if (is_cpumat(x) || is_cpuvec(x))
-    cpuvec()
+    cpuvec(type=x$get_type_str())
   
   else if (is_gpumat(x) || is_gpuvec(x))
-    gpuvec(x$get_card())
+    gpuvec(x$get_card(), type=x$get_type_str())
   
   else if (is_mpimat(x))
-    mpimat(x$get_grid())
+    mpimat(x$get_grid(), type=x$get_type_str())
 }
 
 
