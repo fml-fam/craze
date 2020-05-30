@@ -2,6 +2,7 @@
 % Please edit documentation in R/diag.r
 \name{diag}
 \alias{diag}
+\alias{diag,fmlmat-method}
 \title{diag}
 \usage{
 \S4method{diag}{fmlmat}(x = 1, nrow, ncol, names = TRUE)

@@ -10,6 +10,8 @@
 #' @param names
 #' Ignored.
 #' 
+#' @aliases diag,fmlmat-method
+#' 
 #' @name diag
 #' @rdname diag
 #' @export
