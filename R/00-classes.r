@@ -1,7 +1,9 @@
 setOldClass("cpumat")
+setOldClass("cpuvec")
 setOldClass("gpumat")
+setOldClass("gpuvec")
 setOldClass("mpimat")
-setClassUnion("fmlmat", c("cpumat", "gpumat", "mpimat"))
+setClassUnion("fmlmat", c("cpumat", "cpuvec", "gpumat", "gpuvec", "mpimat"))
 
 #' Class fmlmat
 #' 
