@@ -8,12 +8,16 @@
 
 High-level, R-like interface for [fmlr](https://github.com/fml-fam/fmlr). The package name is a play on the German word 'fimmel' (fml, fimmel, ...).
 
-The goal of the package is to give a move traditional R-like interface around fmlr functions and methods. It's basically just a shallow S4 wrapper. The canonical use case would be something like:
+The goal of the package is to give a more traditional, R-like interface around fmlr functions and methods. It's basically just a shallow S4 wrapper. The canonical use case would be something like:
 
 * build your matrix in R
-* convert to an fmlr object via `as_cpumat()`, `as_gpumat()`, or `as_mpimat()` depending on what you want (may require a copy)
-* convert to the craze `fmlmat` S4 object via `as_fmlmat()` (no copy)
+* convert to an fmlr object:
+    - the easy way: use `fmlmat()`
+    - the harder, more robust way:
+        - convert the R matrix to an fmlr object via `as_cpumat()`, `as_gpumat()`, or `as_mpimat()` (may require a copy)
+        - convert to a craze `fmlmat` object via `as_fmlmat()` (no copy)
 * call the desired linear algebra function(s)
+
 
 
 ## Installation

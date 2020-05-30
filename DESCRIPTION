@@ -1,8 +1,10 @@
 Package: craze
 Type: Package
-Title: Reference 'fmlr' Implementation
+Title: Interface for 'fmlr'
 Version: 0.2-0
-Description: High-level, R-like interface for 'fmlr'.
+Description: High-level, R-like interface for 'fmlr'. This gives a more
+    traditional, R-like interface around 'fmlr' functions and methods. The
+    package name is a play on the German word 'fimmel'.
 License: BSL-1.0
 Depends:
     R (>= 3.6.0),

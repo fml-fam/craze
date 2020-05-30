@@ -5,7 +5,9 @@
 \alias{craze-package}
 \title{craze}
 \description{
-High-level, R-like interface for fmlr.
+High-level, R-like interface for fmlr. This gives a more
+traditional, R-like interface around fmlr functions and methods. The
+package name is a play on the German word 'fimmel'.
 }
 \author{
 Drew Schmidt
