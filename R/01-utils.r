@@ -36,3 +36,22 @@ skeleton_vec = function(x)
   else if (is_mpimat(x))
     mpimat(x$get_grid())
 }
+
+
+
+DATA = function(x) x@Data
+wrapfml = function(x) new("fmlmat", Data=x)
+
+
+
+ytox = function(x, y)
+{
+  if (is_cpumat(x))
+    as_cpumat(y, copy=FALSE)
+  else if (is_gpumat(x))
+    as_gpumat(x$get_card(), y)
+  else if (is_mpimat(x))
+    as_mpimat(x$get_grid(), y)
+  else
+    stop("'x' must be an fmlr cpu/gpu/mpi-matrix")
+}
