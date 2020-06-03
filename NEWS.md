@@ -1,3 +1,20 @@
+# Release 0.2-1 (//)
+
+New:
+  * Added HPCRAN tags.
+
+API Changes: None
+
+Bug Fixes:
+  * Fixed vectors/values ordering in eigen().
+  * Fixed some issues with tests.
+
+Documentation: None
+
+
+
+
+
 # Release 0.2-0 (5/30/2020)
 
 New:
