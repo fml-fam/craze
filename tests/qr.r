@@ -1,7 +1,7 @@
 suppressMessages(library(craze))
 
 x = matrix(as.double(1:6), 3)
-x_fml = as_fmlmat(as_cpumat(x))
+x_fml = fmlmat(x)
 
 qr = qr(x)
 qr_fml = qr(x_fml)

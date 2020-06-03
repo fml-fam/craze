@@ -4,9 +4,9 @@ x = matrix(as.double(1:30), 10)
 y = matrix(as.double(1:10), 10, 2)
 z = matrix(as.double(1:5), 5, 3)
 
-x_fml = as_fmlmat(as_cpumat(x))
-y_fml = as_fmlmat(as_cpumat(y))
-z_fml = as_fmlmat(as_cpumat(z))
+x_fml = fmlmat(x)
+y_fml = fmlmat(y)
+z_fml = fmlmat(z)
 
 
 

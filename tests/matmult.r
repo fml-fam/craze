@@ -3,8 +3,8 @@ suppressMessages(library(craze))
 x = matrix(as.double(1:30), 10)
 y = matrix(as.double(1:9), 3)
 
-x_fml = as_fmlmat(as_cpumat(x))
-y_fml = as_fmlmat(as_cpumat(y))
+x_fml = fmlmat(x)
+y_fml = fmlmat(y)
 
 
 

@@ -2,8 +2,8 @@ suppressMessages(library(craze))
 
 x = matrix(as.double(1:6), 3)
 v = c(3.0, 7.0)
-x_fml = as_fmlmat(as_cpumat(x))
-v_fml = as_fmlmat(as_cpuvec(v))
+x_fml = fmlmat(x)
+v_fml = fmlmat(v)
 
 test = as.matrix(diag(x_fml))
 truth = diag(x)
