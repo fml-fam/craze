@@ -24,17 +24,17 @@ eigen_fml = function(x, symmetric, only.values=FALSE, EISPACK=FALSE)
   val = skeleton_vec(x_cp)
   
   if (isTRUE(only.values))
-    linalg_eigen_sym(x_cp, val)
+    fmlr::linalg_eigen_sym(x_cp, val)
   else
   {
     vec = skeleton_mat(x_cp)
-    linalg_eigen_sym(x_cp, val, vec)
+    fmlr::linalg_eigen_sym(x_cp, val, vec)
   }
   
   ret = list()
-  ret$values = wrapfml(val$rev())
+  ret$values = wrapfml(val)
   if (!isTRUE(only.values))
-    ret$vectors = wrapfml(vec$rev_cols())
+    ret$vectors = wrapfml(vec)
   
   ret
 }
